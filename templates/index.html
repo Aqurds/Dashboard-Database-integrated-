@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+
+    <!--favicon icon-->
+    <link rel="icon" type="image/png" href="../static/assets/img/favicon.png">
+
+    <title>Dashboard 3</title>
+
+    <!--web fonts-->
+    <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <!--bootstrap styles-->
+    <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--icon font-->
+    <link href="../static/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/assets/vendor/dashlab-icon/dashlab-icon.css" rel="stylesheet">
+    <link href="../static/assets/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="../static/assets/vendor/themify-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="../static/assets/vendor/weather-icons/css/weather-icons.min.css" rel="stylesheet">
+
+    <!--date picker-->
+    <link href="../static/assets/vendor/date-picker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+    <!--custom scrollbar-->
+    <link href="../static/assets/vendor/m-custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+
+    <!--jquery dropdown-->
+    <link href="../static/assets/vendor/jquery-dropdown-master/jquery.dropdown.css" rel="stylesheet">
+
+    <!--jquery ui-->
+    <link href="../static/assets/vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+
+    <!--iCheck-->
+    <link href="../static/assets/vendor/icheck/skins/all.css" rel="stylesheet">
+
+    <!--vector maps -->
+    <link href="../static/assets/vendor/vector-map/jquery-jvectormap-1.1.1.css" rel="stylesheet">
+
+    <!--owl carousel -->
+    <link href="../static/assets/css/owl.carousel.min.css" rel="stylesheet">
+
+    <!--custom styles-->
+    <link href="../static/assets/css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/vendor/html5shiv.js"></script>
+    <script src="assets/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="fixed-nav">
+
+    <div class="top__bar fixed-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex">
+                        <div class="c__logo">
+                            <a href="#"><img src="../static/assets/img/c-logo.jpg" alt="" class="img-fluid"></a>
+                        </div>
+                        <div class="top__bar__menu">
+                            <ul class="list-unstyled">
+                                <li class="active"><a href="#">CRM</a></li>
+                                <li><a href="#" data-toggle="modal" data-target=".customer__modal">Customers</a></li>
+                                <li><a href="#" data-toggle="modal" data-target=".product__modal">Products</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex justify-content-between">
+                        <div class="top__bar__search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Company">
+                                <i class="ti-search"></i>
+                            </div>
+                        </div>
+                        <div class="top__bar__right">
+                            <ul class="list-unstyled">
+                                <li><a href="{{ url_for('test') }}" style="font-size: 12px;">Export <br />Reports</a></li>
+                                <li><a href="#"><i class="icon-user"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#mobile__top__bar" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="top__bar__mobile collapse" id="mobile__top__bar">
+            <div class="top__bar__menu">
+                <ul class="list-unstyled">
+                    <li class="active"><a href="#">CRM</a></li>
+                    <li><a href="#" data-toggle="modal" data-target=".customer__modal">Customers</a></li>
+                    <li><a href="#" data-toggle="modal" data-target=".product__modal">Products</a></li>
+                </ul>
+            </div>
+            <div class="top__bar__search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Company">
+                    <i class="ti-search"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- top__bar end -->
+
+    <!--navigation : sidebar & header-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="top: 50px;" id="mainNav">
+
+        <!--brand name-->
+        <a class="navbar-brand d-flex" href="#">
+            <div class="logo__icon mr-3">
+                <img src="../static/assets/img/logo-icon.png" alt="" />
+            </div>
+            <div class="pr-3">Gousto.co.uk <button class="remove__company"><i class="icon-close"></i></button></div>
+            <button class="btn btn-primary btn-sm btn-rounded weightBold">COMPARE</button>
+        </a>
+        <!--/brand name-->
+
+        <!--responsive nav toggle-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--/responsive nav toggle-->
+
+        <!--responsive rightside toogle-->
+        <!-- <a href="javascript:;" class="nav-link right_side_toggle responsive-right-side-toggle">
+            <i class="icon-options-vertical"> </i>
+        </a> -->
+        <!--/responsive rightside toogle-->
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+            <!--left side nav-->
+            <ul class="navbar-nav left-side-nav" id="accordion">
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Home">
+                    <a href="{{ url_for('home') }}" class="nav-link">
+                        <i class="vl_dashboard"></i>
+                        <span class="nav-link-text">Home </span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Channel">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" data-target="#ui_elements">
+                        <i class="vl_slider-h-range"></i>
+                        <span class="nav-link-text">Channel</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="ui_elements" data-parent="#accordion">
+                        <li> <a href="{{ url_for('mail') }}">Mail</a> </li>
+                        <li> <a href="#">Print</a> </li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">App Push <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">Payback <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">Website <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">App <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">Messengers <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">Facebook Ads <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">Review Platforms <i
+                                    class="icon-lock"></i></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Frequency">
+                    <a href="{{ url_for('frequency') }}" class="nav-link">
+                        <i class="vl_bond"></i>
+                        <span class="nav-link-text">Frequency</span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Product Category">
+                    <a href="{{ url_for('product_category') }}" class="nav-link">
+                        <i class="vl_calendar"></i>
+                        <span class="nav-link-text">Product Category</span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Price actions">
+                    <a href="{{ url_for('promotions') }}" class="nav-link">
+                        <i class="vl_hand-mike"></i>
+                        <span class="nav-link-text">Promotions</span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Topics">
+                    <a href="{{ url_for('topics') }}" class="nav-link">
+                        <i class="vl_form"></i>
+                        <span class="nav-link-text">Topics</span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Customer Journeys">
+                    <a href="{{ url_for('customer_journey') }}" class="nav-link">
+                        <i class="vl_grid-even"></i>
+                        <span class="nav-link-text">Customer Journeys</span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Touchpoint Banks">
+                    <a href="{{ url_for('touchpoint_banks') }}" class="nav-link">
+                        <i class="vl_graph-bar"></i>
+                        <span class="nav-link-text">Touchpoint Banks</span>
+                    </a>
+                </li>
+            </ul>
+            <!--/left side nav-->
+
+            <!--nav push link-->
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="left-nav-toggler">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+            <!--/nav push link-->
+
+
+            <!--header rightside links-->
+            <ul class="navbar-nav header-links ml-auto hide-arrow">
+                <li class="nav-item dropdown border-style-wrapper">
+                    <a class="nav-link dropdown-toggle mr-lg-3 text-muted" id="messagesDropdown" href="#"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="displayText">All Customer Segments</span> <i class="fa fa-caret-down pl-2"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right header-right-dropdown-width pb-0"
+                        aria-labelledby="messagesDropdown">
+                        <div class="input-group border-style">
+                            <label><i class="ti-search"></i> <input type="text"
+                                    placeholder="Type Customer Segment"></label>
+                        </div>
+
+                        <ul class="list-unstyled">
+                            <!-- <li class="dropdown-item msg-unread border-bottom">All Customer Segments</li> -->
+                            <li class="dropdown-item d-flex justify-content-between align-items-center selected"><span
+                                    class="itemText">All Customer Segments</span>
+                                <i class="fa fa-lock"></i></li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                    class="itemText">Lead</span>
+                                <i class="fa fa-lock"></i></li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                    class="itemText">One-time Buyer</span>
+                                <i class="fa fa-lock"></i></li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                    class="itemText">Life-time Buyer</span>
+                                <i class="fa fa-lock"></i></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item dropdown border-style-wrapper">
+                    <a class="nav-link dropdown-toggle mr-lg-3 d-flex align-items-center text-muted" id="alertsDropdown"
+                        href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-globe pr-2"></i><span class="displayText">Worldwide</span> <i
+                            class="fa fa-caret-down pl-2"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right header-right-dropdown-width pb-0"
+                        aria-labelledby="alertsDropdown">
+
+                        <div class="input-group border-style">
+                            <label><i class="ti-search"></i> <input type="text" placeholder="Type Country Name"></label>
+                        </div>
+
+                        <ul class="list-unstyled">
+
+                            <li class="dropdown-item selected d-flex justify-content-between align-items-center">
+                                <span><i class="fa fa-globe"></i>
+                                    <span class="itemText">Worldwide</span> </span>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span><i
+                                        class="pr-2"> <img src="assets/img/flag-1.jpg" width="20px" alt=""></i>
+                                    <span class="itemText">Argentina</span> <i class="pl-2 ti-layers"></i></span>
+                                <i class="fa fa-lock"></i>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span><i
+                                        class="pr-2"> <img src="assets/img/flag-1.jpg" width="20px" alt=""></i>
+                                    <span class="itemText">Australia</span> <i class="pl-2 ti-layers"></i></span>
+                                <i class="fa fa-lock"></i>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span><i
+                                        class="pr-2"> <img src="assets/img/flag-1.jpg" width="20px" alt=""></i> <span
+                                        class="itemText">Austria</span>
+                                    <i class="pl-2 ti-layers"></i></span> <i class="fa fa-lock"></i></li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span><i
+                                        class="pr-2"> <img src="assets/img/flag-1.jpg" width="20px" alt=""></i> <span
+                                        class="itemText">Belgium</span>
+                                    <i class="pl-2 ti-layers"></i></span> <i class="fa fa-lock"></i></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-3 text-muted" id="userNav" href="#">
+                        <i class="fa fa-filter"></i>
+                    </a>
+                </li>
+            </ul>
+            <!--/header rightside links-->
+
+        </div>
+    </nav>
+    <!--/navigation : sidebar & header-->
+
+    <!--main content wrapper-->
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!--sales statistical overview-->
+            <h4 class="py-2">Overview</h4>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card card-shadow mb-4">
+                        <div class="card-header border-0 d-flex justify-content-between">
+                            <div class="custom-title-wrap bar-info">
+                                <div class="custom-title">Direct Marketing</div>
+                            </div>
+                            <div class="date dpMonths">
+                                <button id="dp-mdo" class="btn btn-primary" type="button"><i class="fa fa-calendar f14"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-3">
+                                    <span class="text-muted mb-5 d-inline-block"><i class="ti-hand-point-up "></i>
+                                        Touchpoints</span>
+                                    <h1 class="mb-0">13</h1>
+                                    <small class="text-muted">Avgerage Touchpoints per week  {{data}}</small>
+                                </div>
+                                <div class="col-xl-9">
+                                    <div class="marketing__bar">
+                                        <div class="marketing__actions">
+                                            <button class="left__arrow"><i class="fa fa-angle-left"></i></button>
+                                            <button class="right__arrow"><i class="fa fa-angle-right"></i></button>
+                                        </div>
+                                        <canvas id="dash3_sales_chart" height="250"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--/sales statistical overview-->
+
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="card card-shadow mb-4 height100">
+                        <div class="card-header border-0">
+                            <div class="custom-title-wrap bar-warning">
+                                <div class="custom-title">Days</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="doughnut_chart1" style="height: 195px" class="mb-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-md-5">
+                    <div class="card card-shadow mb-4 height100">
+                        <div class="card-header border-0">
+                            <div class="custom-title-wrap bar-danger">
+                                <div class="custom-title">
+                                    Product Category
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pt-3 pb-4">
+                            <div class="tab-content" id="pills-tabContent2">
+                                <div class="tab-pane fade show active" id="pills-weekly2" role="tabpanel"
+                                    aria-labelledby="pills-today-tab">
+                                    <div class="row">
+                                        <div class="col-12 text-center px-0">
+                                            <div id="doughnut_chart_example" style="height: 195px"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3">
+                    <div class="card card-shadow mb-4 height100">
+                        <div class="card-header border-0">
+                            <div class="custom-title-wrap bar-warning">
+                                <div class="custom-title">Promotions</div>
+                            </div>
+                        </div>
+                        <div class="card-body px-0">
+                            <canvas id="doughnut_chart" class="mb-2"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="py-2">Latest Touchpoints</h4>
+            <div class="row">
+                <div class="latest__touchpoints owl-carousel">
+                    <div class="touchpoint__box">
+                        <div class="TB__header">
+                            <figure data-toggle="modal" data-target=".details__modal"><img src="../static/assets/img/brands/1.jpg"
+                                    alt=""></figure>
+                            <div>
+                                <h6>The Gousto Team</h6>
+                                <p>Tue, Apr. 2, 2019 </p>
+                            </div>
+                        </div>
+                        <!--TB__header end-->
+                        <div class="TB__body">
+                            <h2>New menu out now!</h2>
+                            <a href="javascript:;" data-toggle="modal" data-target=".details__modal"><img
+                                    src="../static/assets/img/images/5-1.jpg" alt=""></a>
+                        </div>
+                        <!--TB__body end-->
+                    </div>
+                    <!-- touchpoint__box -->
+                    <div class="touchpoint__box">
+                        <div class="TB__header">
+                            <figure data-toggle="modal" data-target=".details__modal"><img src="../static/assets/img/brands/2.jpg"
+                                    alt=""></figure>
+                            <div>
+                                <h6>Levi's</h6>
+                                <p>Mon, Apr. 1, 2019 </p>
+                            </div>
+
+                        </div>
+                        <!--TB__header end-->
+                        <div class="TB__body">
+                            <h2>He's back: Levi's &copy; x Justin Timberlake</h2>
+                            <a href="javascript:;" data-toggle="modal" data-target=".details__modal"><img
+                                    src="../static/assets/img/images/6-1.jpg" alt=""></a>
+                        </div>
+                        <!--TB__body end-->
+                    </div>
+                    <!-- touchpoint__box -->
+                    <div class="touchpoint__box">
+                        <div class="TB__header">
+                            <figure data-toggle="modal" data-target=".details__modal"><img src="../static/assets/img/brands/1.jpg"
+                                    alt=""></figure>
+                            <div>
+                                <h6>The Gousto Team</h6>
+                                <p>Tue, Apr. 2, 2019 </p>
+                            </div>
+
+                        </div>
+                        <!--TB__header end-->
+                        <div class="TB__body">
+                            <h2>New menu out now!</h2>
+                            <a href="javascript:;" data-toggle="modal" data-target=".details__modal"><img
+                                    src="../static/assets/img/images/7-1.jpg" alt=""></a>
+                        </div>
+                        <!--TB__body end-->
+                    </div>
+                    <!-- touchpoint__box -->
+                    <div class="touchpoint__box">
+                        <div class="TB__header">
+                            <figure data-toggle="modal" data-target=".details__modal"><img src="../static/assets/img/brands/2.jpg"
+                                    alt=""></figure>
+                            <div>
+                                <h6>Levi's</h6>
+                                <p>Tue, Apr. 2, 2019 </p>
+                            </div>
+                        </div>
+                        <!--TB__header end-->
+                        <div class="TB__body">
+                            <h2>The best of the best</h2>
+                            <a href="javascript:;" data-toggle="modal" data-target=".details__modal"><img
+                                    src="../static/assets/img/images/8-1.jpg" alt=""></a>
+                        </div>
+                        <!--TB__body end-->
+                    </div>
+                    <!-- touchpoint__box -->
+                    <div class="touchpoint__box">
+                        <div class="TB__header">
+                            <figure data-toggle="modal" data-target=".details__modal"><img src="../static/assets/img/brands/2.jpg"
+                                    alt=""></figure>
+                            <div>
+                                <h6>Levi's</h6>
+                                <p>Tue, Apr. 2, 2019 </p>
+                            </div>
+                        </div>
+                        <!--TB__header end-->
+                        <div class="TB__body">
+                            <h2>The best of the best</h2>
+                            <a href="javascript:;" data-toggle="modal" data-target=".details__modal"><img
+                                    src="../static/assets/img/images/9-1.jpg" alt=""></a>
+                        </div>
+                        <!--TB__body end-->
+                    </div>
+                    <!-- touchpoint__box -->
+                    <div class="touchpoint__box">
+                        <div class="TB__header">
+                            <figure data-toggle="modal" data-target=".details__modal"><img src="../static/assets/img/brands/2.jpg"
+                                    alt=""></figure>
+                            <div>
+                                <h6>Levi's</h6>
+                                <p>Tue, Apr. 2, 2019 </p>
+                            </div>
+                        </div>
+                        <!--TB__header end-->
+                        <div class="TB__body">
+                            <h2>The best of the best</h2>
+                            <a href="javascript:;" data-toggle="modal" data-target=".details__modal"><img
+                                    src="../static/assets/img/images/7-1.jpg" alt=""></a>
+                        </div>
+                        <!--TB__body end-->
+                    </div>
+                    <!-- touchpoint__box -->
+                </div>
+            </div>
+
+
+        </div>
+
+        <!--footer-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright &copy; CRM Spy 2019</small>
+                </div>
+            </div>
+        </footer>
+        <!--/footer-->
+    </div>
+    <!--/main content wrapper-->
+
+
+    <!-- Modal -->
+    <div class="modal fade details__modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0 pl-0 pb-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="details__modal__content">
+                        <div class="DM__left">
+                            <div class="DML_header">
+                                <figure><img src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                <div>
+                                    <h6>From <a href="#">Gousto(UK)</a> to <a href="#">subscription abandoner</a></h6>
+                                    <p>Tuesday, April 02, 2019 at 6:39 pm</p>
+                                </div>
+                            </div>
+                            <div class="DML_body">
+                                <h6>New menu out now!</h6>
+                                <p>can't see this email? <a href="">click here.</a> Gousto Corin, this weeek's menu if
+                                    here!
+                                </p>
+
+                                <div class="d-flex viewing__options">
+                                    <div><strong>VIEWING</strong>
+                                        <select>
+                                            <option>Desktop</option>
+                                        </select></div>
+                                    <button class="btn btn-sm btn-primary">Export Image</button>
+                                </div>
+
+                                <div class="image__preview">
+                                    <img src="../static/assets/img/images/4.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="DM__right">
+                            <ul class="nav" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#details__tab" role="tab"
+                                        aria-selected="true">Details</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#addtolist__tab" role="tab"
+                                        aria-selected="false">Add to List</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="details__tab" role="tabpanel">
+                                    <div class="tab__box">
+                                        <h6 class="text-muted">EMAIL SCORE <span data-toggle="tooltip"
+                                                data-placement="top" title="Some information"><i
+                                                    class="icon-question text-primary"></i></span></h6>
+                                        <div class="email__score">
+                                            <h2 class="text-success">87%</h2>
+                                            <ul class="list-unstyled">
+                                                <li class="text-success"><i class="ti-check"></i> Mobile Optimized</li>
+                                                <li class="text-success"><i class="ti-check"></i> Spam Filter Compliant
+                                                </li>
+                                                <li class="text-success"><i class="ti-check"></i> Replayable email
+                                                    adddess
+                                                </li>
+                                                <li class="text-danger"><i class="ti-close"></i> Optimized Preview text
+                                                </li>
+                                                <li class="text-success"><i class="ti-check"></i> Gmail Friendly HTML
+                                                    Weight
+                                                </li>
+                                                <li class="text-success"><i class="ti-check"></i> Inbox-Friendly Subject
+                                                    line Length</li>
+                                                <li class="text-success"><i class="ti-check"></i> Pasing DKIM & SPF
+                                                    Checks
+                                                </li>
+                                                <li class="text-success"><i class="ti-check"></i> Sensible Image Weight
+                                                </li>
+                                            </ul>
+                                            <p><a href="#">View Email Score Trends</a></p>
+                                        </div>
+
+                                        <div class="border-top border-bottom info__box">
+                                            <h5>What Powers Gousto (UK) Emails?</h5>
+                                            <p>Every email we recieve is passed to determine the sending ESP and any
+                                                additional
+                                                email technologies used. </p>
+                                            <button class="upgrade__btn">Upgrade Now</button>
+                                        </div>
+                                        <p class="text-muted mt-2"><small>Every email we recieve is passed.</small></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="addtolist__tab" role="tabpanel">
+                                    Add to List</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+
+    <!-- Modal -->
+    <div class="modal fade customer__modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body px-0 pb-0" style="background: #3f74c3;">
+                    <div class="custom__modal">
+                        <button type="button" class="close__btn" data-dismiss="modal" aria-label="Close"><i
+                                class="fa fa-close"></i></button>
+                        <div class="modal__top">
+                            <img src="../static/assets/img/customers.jpg" alt="">
+                            <div class="modal__actions">
+                                <div>
+                                    <span class="py-2 px-3 badge badge-primary mr-2">Customer</span>
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                                <button class="btn btn-sm btn-success">Gain Access</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer flex-column justify-content-center">
+                    <h4 class="m-0">Leverage the power of CRM Spy to identify trending products</h4>
+                    <p class="m-0">Use our data to understand what products are trending and who is buying them</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+
+    <!-- Modal -->
+    <div class="modal fade product__modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body px-0 pb-0" style="background: #3f74c3;">
+                    <div class="custom__modal">
+                        <button type="button" class="close__btn" data-dismiss="modal" aria-label="Close"><i
+                                class="fa fa-close"></i></button>
+                        <div class="modal__top">
+                            <img src="../static/assets/img/products.jpg" alt="">
+                            <div class="modal__actions">
+                                <div>
+                                    <span class="py-2 px-3 badge badge-primary mr-2">Products</span>
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                                <button class="btn btn-sm btn-success">Gain Access</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer flex-column justify-content-center">
+                    <h4 class="m-0">Leverage the power of CRM Spy to identify trending products</h4>
+                    <p class="m-0">Use our data to understand what products are trending and who is buying them</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+
+    <!--basic scripts-->
+    <script src="../static/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../static/assets/vendor/popper.min.js"></script>
+    <script src="../static/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../static/assets/vendor/jquery-dropdown-master/jquery.dropdown.js"></script>
+
+    <script src="../static/assets/vendor/m-custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!--sparkline-->
+    <script src="../static/assets/vendor/sparkline/jquery.sparkline.js"></script>
+    <!--sparkline initialization-->
+    <script src="../static/assets/vendor/js-init/sparkline/init-sparkline.js"></script>
+
+    <!--chartjs-->
+    <script src="../static/assets/vendor/chartjs/Chart.bundle.min.js"></script>
+    <!--chartjs initialization-->
+
+    <script src="../static/assets/vendor/js-init/chartjs/init-doughnut-chart.js"></script>
+    <script src="../static/assets/vendor/js-init/chartjs/init-doughnut-chart1.js"></script>
+    <script src="../static/assets/vendor/js-init/chartjs/init-doughnut-chart2.js"></script>
+    <script src="../static/assets/vendor/js-init/chartjs/init-dash3-sales.js"></script>
+
+
+    <!--echarts-->
+    <script type="text/javascript" src="../static/assets/vendor/echarts/echarts-all-3.js"></script>
+
+    <!--init echarts-->
+    <script type="text/javascript" src="../static/assets/vendor/js-init/echart/init-doughnut-chart.js"></script>
+
+    <!--vectormap-->
+    <script src="../static/assets/vendor/vector-map/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="../static/assets/vendor/vector-map/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../static/assets/vendor/vector-map/jquery-jvectormap-us-aea.js"></script>
+    <!--vectormap initialization-->
+    <script src="../static/assets/vendor/js-init/vmap/init-vmap-world.js"></script>
+    <script src="../static/assets/vendor/js-init/vmap/init-vmap-usa.js"></script>
+
+    <!--date picker-->
+    <script src="../static/assets/vendor/date-picker/js/bootstrap-datepicker.min.js"></script>
+    <!--init date picker-->
+    <script src="../static/assets/vendor/js-init/pickers/init-date-picker.js"></script>
+
+    <!--datetime picker-->
+    <script src="../static/assets/vendor/datetime-picker/js/bootstrap-datetimepicker.js"></script>
+    <script src="../static/assets/vendor/timepicker/js/bootstrap-timepicker.js"></script>
+
+    <!--to do list-->
+    <script src="../static/assets/vendor/icheck/skins/icheck.min.js"></script>
+    <!--to do list initialization-->
+    <script src="../static/assets/vendor/js-init/init-todo-list.js"></script>
+
+    <!-- owl carousel -->
+    <script src="../static/assets/js/owl.carousel.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="assets/vendor/modernizr.js"></script>
+    <![endif]-->
+
+    <!--basic scripts initialization-->
+    <script src="../static/assets/js/scripts.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+        $(document).ready(() => {
+            $(".owl-carousel").owlCarousel({
+                items: 4,
+                margin: 20,
+                nav: true,
+                dots: false,
+                responsive: {
+                    320: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2,
+                    },
+                    1200: {
+                        items: 4,
+                    }
+                }
+            });
+            $('.border-style-wrapper .dropdown-item.d-flex').click(function () {
+                $(this).parents('.border-style-wrapper').find('.dropdown-item.d-flex').removeClass(
+                    'selected');
+                $(this).addClass('selected')
+                var text = $(this).find('.itemText').text();
+                $(this).parents('.border-style-wrapper').find('.displayText').text(text);
+
+                //$(this).parents('.border-style-wrapper').find('.dropdown-item.msg-unread').text(text);
+            })
+
+
+
+        })
+    </script>
+
+    <style>
+        .selected {
+            background: #f4f6f9;
+        }
+    </style>
+</body>
+
+</html>

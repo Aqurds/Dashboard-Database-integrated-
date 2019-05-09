@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+
+    <!--favicon icon-->
+    <link rel="icon" type="image/png" href="../static/assets/img/favicon.png">
+
+    <title>Product Category</title>
+
+    <!--web fonts-->
+    <link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <!--bootstrap styles-->
+    <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--icon font-->
+    <link href="../static/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../static/assets/vendor/dashlab-icon/dashlab-icon.css" rel="stylesheet">
+    <link href="../static/assets/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="../static/assets/vendor/themify-icons/css/themify-icons.css" rel="stylesheet">
+    <link href="../static/assets/vendor/weather-icons/css/weather-icons.min.css" rel="stylesheet">
+
+    <!--date picker-->
+    <link href="../static/assets/vendor/date-picker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+    <!--custom scrollbar-->
+    <link href="../static/assets/vendor/m-custom-scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet">
+
+    <!--jquery dropdown-->
+    <link href="../static/assets/vendor/jquery-dropdown-master/jquery.dropdown.css" rel="stylesheet">
+
+    <!--jquery ui-->
+    <link href="../static/assets/vendor/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+
+    <!--iCheck-->
+    <link href="../static/assets/vendor/icheck/skins/all.css" rel="stylesheet">
+
+    <!--vector maps -->
+    <link href="../static/assets/vendor/vector-map/jquery-jvectormap-1.1.1.css" rel="stylesheet">
+
+    <!--owl carousel -->
+    <link href="../static/assets/css/owl.carousel.min.css" rel="stylesheet">
+
+    <!--data table-->
+    <link href="../static/assets/vendor/data-tables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <!--fullcalendar-->
+    <link href='../static/assets/vendor/fullcalendar-3.7.0/fullcalendar.css' rel='stylesheet' />
+
+    <!--custom styles-->
+    <link href="../static/assets/css/main.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/vendor/html5shiv.js"></script>
+    <script src="assets/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="fixed-nav">
+
+    <div class="top__bar fixed-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex">
+                        <div class="c__logo">
+                            <a href="#"><img src="../static/assets/img/c-logo.jpg" alt="" class="img-fluid"></a>
+                        </div>
+                        <div class="top__bar__menu">
+                            <ul class="list-unstyled">
+                                <li class="active"><a href="#">CRM</a></li>
+                                <li><a href="#" data-toggle="modal" data-target=".customer__modal">Cumsomers</a></li>
+                                <li><a href="#" data-toggle="modal" data-target=".product__modal">Products</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex justify-content-between">
+                        <div class="top__bar__search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Company">
+                                <i class="ti-search"></i>
+                            </div>
+                        </div>
+                        <div class="top__bar__right">
+                            <ul class="list-unstyled">
+                                <li><a href="#" style="font-size: 12px;">Expert <br />Reports</a></li>
+                                <li><a href="#"><i class="icon-user"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button class="mobile-navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#mobile__top__bar" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="top__bar__mobile collapse" id="mobile__top__bar">
+            <div class="top__bar__menu">
+                <ul class="list-unstyled">
+                    <li class="active"><a href="#">CRM</a></li>
+                    <li><a href="#" data-toggle="modal" data-target=".customer__modal">Cumsomers</a></li>
+                    <li><a href="#" data-toggle="modal" data-target=".product__modal">Products</a></li>
+                </ul>
+            </div>
+            <div class="top__bar__search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Company">
+                    <i class="ti-search"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- top__bar end -->
+
+
+
+
+
+    <!--navigation : sidebar & header-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="top: 50px;" id="mainNav">
+
+        <!--brand name-->
+        <a class="navbar-brand d-flex" href="#">
+            <div class="logo__icon mr-3">
+                <img src="../static/assets/img/logo-icon.png" alt="" />
+            </div>
+            <div class="pr-3">Gousto.co.uk <button class="remove__company"><i class="icon-close"></i></button></div>
+            <button class="btn btn-primary btn-sm btn-rounded weightBold">COMPARE</button>
+        </a>
+        <!--/brand name-->
+
+
+        <!--responsive nav toggle-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--/responsive nav toggle-->
+
+        <!-- responsive rightside toogle-->
+        <!-- <a href="javascript:;" class="nav-link right_side_toggle responsive-right-side-toggle">
+            <i class="icon-options-vertical"> </i>
+        </a> -->
+        <!--/responsive rightside toogle -->
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+
+            <!--left side nav-->
+            <ul class="navbar-nav left-side-nav" id="accordion">
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Home">
+                    <a href="{{ url_for('home') }}" class="nav-link">
+                        <i class="vl_dashboard"></i>
+                        <span class="nav-link-text">Home </span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Channel">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" data-target="#ui_elements">
+                        <i class="vl_slider-h-range"></i>
+                        <span class="nav-link-text">Channel</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="ui_elements" data-parent="#accordion">
+                        <li> <a href="{{ url_for('mail') }}">Mail</a> </li>
+                        <li> <a href="#">Print</a> </li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">App Push <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">Payback <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">Website <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">App <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">Messengers <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">Facebook Ads <i
+                                    class="icon-lock"></i></a></li>
+                        <li> <a href="#" class="d-flex justify-content-between align-items-center">Review Platforms <i
+                                    class="icon-lock"></i></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Frequency">
+                    <a href="{{ url_for('frequency') }}" class="nav-link">
+                        <i class="vl_bond"></i>
+                        <span class="nav-link-text">Frequency</span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Product Category">
+                    <a href="{{ url_for('product_category') }}" class="nav-link">
+                        <i class="vl_calendar"></i>
+                        <span class="nav-link-text">Product Category</span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Price actions">
+                    <a href="{{ url_for('promotions') }}" class="nav-link">
+                        <i class="vl_hand-mike"></i>
+                        <span class="nav-link-text">Promotions</span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Topics">
+                    <a href="{{ url_for('topics') }}" class="nav-link">
+                        <i class="vl_form"></i>
+                        <span class="nav-link-text">Topics</span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Customer Journeys">
+                    <a href="{{ url_for('customer_journey') }}" class="nav-link">
+                        <i class="vl_grid-even"></i>
+                        <span class="nav-link-text">Customer Journeys</span>
+                    </a>
+                </li>
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Touchpoint Banks">
+                    <a href="{{ url_for('touchpoint_banks') }}" class="nav-link">
+                        <i class="vl_graph-bar"></i>
+                        <span class="nav-link-text">Touchpoint Banks</span>
+                    </a>
+                </li>
+            </ul>
+            <!--/left side nav-->
+
+            <!--nav push link-->
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="left-nav-toggler">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+            <!--/nav push link-->
+
+
+            <!--header rightside links-->
+            <ul class="navbar-nav header-links ml-auto hide-arrow">
+                <li class="nav-item dropdown border-style-wrapper">
+                    <!-- Datepicker in nav menu -->
+                    <div class="date dpMonths">
+                        <button id="dp-mdo-product-category" class="btn btn-primary" type="button"><i class="fa fa-calendar f14"></i></button>
+                    </div>
+                    <!-- Datepicker in nav menu end here-->
+                </li>
+                <li class="nav-item dropdown border-style-wrapper">
+                    <a class="nav-link dropdown-toggle mr-lg-3 text-muted" id="messagesDropdown" href="#"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="displayText">All Customer Segments</span> <i class="fa fa-caret-down pl-2"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right header-right-dropdown-width pb-0"
+                        aria-labelledby="messagesDropdown">
+                        <div class="input-group border-style">
+                            <label><i class="ti-search"></i> <input type="text"
+                                    placeholder="Type Customer Segment"></label>
+                        </div>
+
+                        <ul class="list-unstyled">
+                            <!-- <li class="dropdown-item msg-unread border-bottom">All Customer Segments</li> -->
+                            <li class="dropdown-item d-flex justify-content-between align-items-center selected"><span
+                                    class="itemText">All Customer Segments</span>
+                                <i class="fa fa-lock"></i></li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                    class="itemText">Lead</span>
+                                <i class="fa fa-lock"></i></li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                    class="itemText">One-time Buyer</span>
+                                <i class="fa fa-lock"></i></li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                    class="itemText">Life-time Buyer</span>
+                                <i class="fa fa-lock"></i></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item dropdown border-style-wrapper">
+                    <a class="nav-link dropdown-toggle mr-lg-3 d-flex align-items-center text-muted" id="alertsDropdown"
+                        href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-globe pr-2"></i><span class="displayText">Worldwide</span> <i
+                            class="fa fa-caret-down pl-2"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right header-right-dropdown-width pb-0"
+                        aria-labelledby="alertsDropdown">
+
+                        <div class="input-group border-style">
+                            <label><i class="ti-search"></i> <input type="text" placeholder="Type Country Name"></label>
+                        </div>
+
+                        <ul class="list-unstyled">
+
+                            <li class="dropdown-item selected d-flex justify-content-between align-items-center">
+                                <span><i class="fa fa-globe"></i>
+                                    <span class="itemText">Worldwide</span> </span>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span><i
+                                        class="pr-2"> <img src="assets/img/flag-1.jpg" width="20px" alt=""></i>
+                                    <span class="itemText">Argentina</span> <i class="pl-2 ti-layers"></i></span>
+                                <i class="fa fa-lock"></i>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span><i
+                                        class="pr-2"> <img src="assets/img/flag-1.jpg" width="20px" alt=""></i>
+                                    <span class="itemText">Australia</span> <i class="pl-2 ti-layers"></i></span>
+                                <i class="fa fa-lock"></i>
+                            </li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span><i
+                                        class="pr-2"> <img src="assets/img/flag-1.jpg" width="20px" alt=""></i> <span
+                                        class="itemText">Austria</span>
+                                    <i class="pl-2 ti-layers"></i></span> <i class="fa fa-lock"></i></li>
+                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span><i
+                                        class="pr-2"> <img src="assets/img/flag-1.jpg" width="20px" alt=""></i> <span
+                                        class="itemText">Belgium</span>
+                                    <i class="pl-2 ti-layers"></i></span> <i class="fa fa-lock"></i></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-3 text-muted" id="userNav" href="#">
+                        <i class="fa fa-filter"></i>
+                    </a>
+                </li>
+            </ul>
+            <!--/header rightside links-->
+        </div>
+    </nav>
+    <!--/navigation : sidebar & header-->
+
+
+
+
+
+
+    <!--main content wrapper-->
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+            <!--Heading of this container-->
+            <h4 class="py-2">Product Category</h4>
+
+
+            <!-- ===================================================================== -->
+            <!-- First row of this page, contain "Multiline chart". Start from here-->
+            <!-- ============================================================== -->
+            <div class="row">
+                <!-- Multiline chart section in the first row start here -->
+                <div class="col-12">
+                    <div class="card card-shadow mb-4 frequency-page-first-row-time-section-bubble-chart">
+                        <div class="card-header border-0">
+                            <div class="custom-title-wrap bar-pink">
+                                <div class="custom-title">Product Categories Over Time</div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0 line-chart-div" id="multi-line-chart-container-product-category">
+                        </div>
+                    </div>
+                </div>
+                <!-- Multiline chart section in the first row end here -->
+            </div>
+            <!-- First row of this page, contain "Multiline chart". End here-->
+
+
+
+
+            <!-- ==================================================================================================== -->
+            <!-- Second row of this page, contain "Product Category", "Product Categories Per Day". Start from here-->
+            <!-- ============================================================================================== -->
+            <div class="row">
+
+                <!-- Product Category chart section in the first row start here -->
+                <div class="col-xl-5 col-md-6">
+                    <div class="card card-shadow mb-4 height100">
+                        <div class="card-header border-0">
+                            <div class="custom-title-wrap bar-warning">
+                                <div class="custom-title">Product Category</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="doughnut_chart_product_category" style="height: 195px" class="mb-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Category section in the first row end here -->
+
+
+                <!-- Products Categories per Day chart section start here -->
+                <div class="col-xl-7 col-md-6">
+                    <div class="card card-shadow mb-4 height100">
+                        <div class="card-header border-0">
+                            <div class="custom-title-wrap bar-primary">
+                                <div class="custom-title">Products Categories Per Day</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="product-categories-per-day-bar-chart-js" height="250"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <!-- Products Categories per Day chart section end here -->
+
+            </div>
+            <!-- Second row of this page, contain "Product Category", "Product Categories Per Day". End here-->
+
+
+
+
+            <!-- ======================================================================= -->
+            <!-- Third row of this page, contain Accordion with tabs. Start from here-->
+            <!-- =============================================================== -->
+            <div class="row">
+                <div class="col">
+                    <h4 class="py-2">Touchpoints</h4>
+                    <div class="card card-shadow mb-4">
+                        <div class="card-body position-relative">
+                            <ul class="nav custom__nav mb-4" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#tab-p-i_1"><i
+                                            class="ti-image pr-1"></i> Thumbnail</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab-p-i_4"><i
+                                            class="ti-layout pr-1"></i>Table</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#tab-p-i_3"><i
+                                            class="ti-calendar pr-1"></i>Calendar</a>
+                                </li>
+                            </ul>
+
+
+
+                            <!--product category page tab rightside links-->
+                            <ul class="navbar-nav header-links ml-auto hide-arrow product-category-tab-rightside-link">
+
+                                <li class="nav-item dropdown border-style-wrapper">
+                                    <a class="nav-link dropdown-toggle mr-lg-3 text-muted" id="messagesDropdown" href="#"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="displayText">Product Category</span> <i class="fa fa-caret-down pl-2"></i>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right header-right-dropdown-width pb-0 custom-tab-ul" aria-labelledby="messagesDropdown">
+
+                                        <ul class="list-unstyled">
+                                            <!-- <li class="dropdown-item msg-unread border-bottom">All Customer Segments</li> -->
+                                            <li class="dropdown-item d-flex justify-content-between align-items-center selected"><span
+                                                    class="itemText">Vacation</span>
+                                                <i class="fa fa-lock"></i></li>
+                                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                                    class="itemText">Insurance</span>
+                                                <i class="fa fa-lock"></i></li>
+                                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                                    class="itemText">Profits</span>
+                                                <i class="fa fa-lock"></i></li>
+                                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                                    class="itemText">Gas</span>
+                                                <i class="fa fa-lock"></i></li>
+                                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                                  class="itemText">DSL</span>
+                                              <i class="fa fa-lock"></i></li>
+                                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                                    class="itemText">Mobile</span>
+                                                <i class="fa fa-lock"></i></li>
+                                            <li class="dropdown-item d-flex justify-content-between align-items-center"><span
+                                                    class="itemText">Electricity</span>
+                                                <i class="fa fa-lock"></i></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!--/header rightside links-->
+
+                            <div class="inbox__filters">
+                                <ul class="list-unstyled">
+                                    <li><span class="bg-light">630 Mails</span><select name=""
+                                            class="form-control form-control-sm">
+                                            <option value="">Newest to oldest</option>
+                                            <option value="">Oldest to newest</option>
+                                        </select></li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-content tab-content-mobile-layout-fix">
+                                <div class="tab-pane active" id="tab-p-i_1" role="tabpanel">
+                                    <div class="thumbnail__wrapper">
+                                        <div class="touchpoint__box">
+                                            <div class="TB__header">
+                                                <figure data-toggle="modal" data-target=".details__modal"><img
+                                                        src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                                <div>
+                                                    <h6>The Gousto Team</h6>
+                                                    <p>Tue, Apr. 2, 2019 </p>
+                                                </div>
+                                            </div>
+                                            <!--TB__header end-->
+                                            <div class="TB__body">
+                                                <h2>New menu out now!</h2>
+                                                <a href="javascript:;" data-toggle="modal"
+                                                    data-target=".details__modal"><img src="../static/assets/img/images/5-1.jpg"
+                                                        alt=""></a>
+                                            </div>
+                                            <!--TB__body end-->
+                                        </div>
+                                        <!-- touchpoint__box -->
+                                        <div class="touchpoint__box">
+                                            <div class="TB__header">
+                                                <figure data-toggle="modal" data-target=".details__modal"><img
+                                                        src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                                <div>
+                                                    <h6>The Gousto Team</h6>
+                                                    <p>Tue, Apr. 2, 2019 </p>
+                                                </div>
+                                            </div>
+                                            <!--TB__header end-->
+                                            <div class="TB__body">
+                                                <h2>New menu out now!</h2>
+                                                <a href="javascript:;" data-toggle="modal"
+                                                    data-target=".details__modal"><img src="../static/assets/img/images/6-1.jpg"
+                                                        alt=""></a>
+                                            </div>
+                                            <!--TB__body end-->
+                                        </div>
+                                        <!-- touchpoint__box -->
+                                        <div class="touchpoint__box">
+                                            <div class="TB__header">
+                                                <figure data-toggle="modal" data-target=".details__modal"><img
+                                                        src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                                <div>
+                                                    <h6>The Gousto Team</h6>
+                                                    <p>Tue, Apr. 2, 2019 </p>
+                                                </div>
+                                            </div>
+                                            <!--TB__header end-->
+                                            <div class="TB__body">
+                                                <h2>New menu out now!</h2>
+                                                <a href="javascript:;" data-toggle="modal"
+                                                    data-target=".details__modal"><img src="../static/assets/img/images/7-1.jpg"
+                                                        alt=""></a>
+                                            </div>
+                                            <!--TB__body end-->
+                                        </div>
+                                        <!-- touchpoint__box -->
+                                        <div class="touchpoint__box">
+                                            <div class="TB__header">
+                                                <figure data-toggle="modal" data-target=".details__modal"><img
+                                                        src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                                <div>
+                                                    <h6>The Gousto Team</h6>
+                                                    <p>Tue, Apr. 2, 2019 </p>
+                                                </div>
+                                            </div>
+                                            <!--TB__header end-->
+                                            <div class="TB__body">
+                                                <h2>New menu out now!</h2>
+                                                <a href="javascript:;" data-toggle="modal"
+                                                    data-target=".details__modal"><img src="../static/assets/img/images/8-1.jpg"
+                                                        alt=""></a>
+                                            </div>
+                                            <!--TB__body end-->
+                                        </div>
+                                        <!-- touchpoint__box -->
+                                        <div class="touchpoint__box">
+                                            <div class="TB__header">
+                                                <figure data-toggle="modal" data-target=".details__modal"><img
+                                                        src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                                <div>
+                                                    <h6>The Gousto Team</h6>
+                                                    <p>Tue, Apr. 2, 2019 </p>
+                                                </div>
+                                            </div>
+                                            <!--TB__header end-->
+                                            <div class="TB__body">
+                                                <h2>New menu out now!</h2>
+                                                <a href="javascript:;" data-toggle="modal"
+                                                    data-target=".details__modal"><img src="../static/assets/img/images/9-1.jpg"
+                                                        alt=""></a>
+                                            </div>
+                                            <!--TB__body end-->
+                                        </div>
+                                        <!-- touchpoint__box -->
+                                        <div class="touchpoint__box">
+                                            <div class="TB__header">
+                                                <figure data-toggle="modal" data-target=".details__modal"><img
+                                                        src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                                <div>
+                                                    <h6>The Gousto Team</h6>
+                                                    <p>Tue, Apr. 2, 2019 </p>
+                                                </div>
+                                            </div>
+                                            <!--TB__header end-->
+                                            <div class="TB__body">
+                                                <h2>New menu out now!</h2>
+                                                <a href="javascript:;" data-toggle="modal"
+                                                    data-target=".details__modal"><img src="../static/assets/img/images/5-1.jpg"
+                                                        alt=""></a>
+                                            </div>
+                                            <!--TB__body end-->
+                                        </div>
+                                        <!-- touchpoint__box -->
+                                        <div class="touchpoint__box">
+                                            <div class="TB__header">
+                                                <figure data-toggle="modal" data-target=".details__modal"><img
+                                                        src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                                <div>
+                                                    <h6>The Gousto Team</h6>
+                                                    <p>Tue, Apr. 2, 2019 </p>
+                                                </div>
+                                            </div>
+                                            <!--TB__header end-->
+                                            <div class="TB__body">
+                                                <h2>New menu out now!</h2>
+                                                <a href="javascript:;" data-toggle="modal"
+                                                    data-target=".details__modal"><img src="../static/assets/img/images/7-1.jpg"
+                                                        alt=""></a>
+                                            </div>
+                                            <!--TB__body end-->
+                                        </div>
+                                        <!-- touchpoint__box -->
+                                        <div class="touchpoint__box">
+                                            <div class="TB__header">
+                                                <figure data-toggle="modal" data-target=".details__modal"><img
+                                                        src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                                <div>
+                                                    <h6>The Gousto Team</h6>
+                                                    <p>Tue, Apr. 2, 2019 </p>
+                                                </div>
+                                            </div>
+                                            <!--TB__header end-->
+                                            <div class="TB__body">
+                                                <h2>New menu out now!</h2>
+                                                <a href="javascript:;" data-toggle="modal"
+                                                    data-target=".details__modal"><img src="../static/assets/img/images/9-1.jpg"
+                                                        alt=""></a>
+                                            </div>
+                                            <!--TB__body end-->
+                                        </div>
+                                        <!-- touchpoint__box -->
+                                        <div class="touchpoint__box">
+                                            <div class="TB__header">
+                                                <figure data-toggle="modal" data-target=".details__modal"><img
+                                                        src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                                <div>
+                                                    <h6>The Gousto Team</h6>
+                                                    <p>Tue, Apr. 2, 2019 </p>
+                                                </div>
+                                            </div>
+                                            <!--TB__header end-->
+                                            <div class="TB__body">
+                                                <h2>New menu out now!</h2>
+                                                <a href="javascript:;" data-toggle="modal"
+                                                    data-target=".details__modal"><img src="../static/assets/img/images/9-1.jpg"
+                                                        alt=""></a>
+                                            </div>
+                                            <!--TB__body end-->
+                                        </div>
+                                        <!-- touchpoint__box -->
+                                        <div class="touchpoint__box">
+                                            <div class="TB__header">
+                                                <figure data-toggle="modal" data-target=".details__modal"><img
+                                                        src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                                <div>
+                                                    <h6>The Gousto Team</h6>
+                                                    <p>Tue, Apr. 2, 2019 </p>
+                                                </div>
+                                            </div>
+                                            <!--TB__header end-->
+                                            <div class="TB__body">
+                                                <h2>New menu out now!</h2>
+                                                <a href="javascript:;" data-toggle="modal"
+                                                    data-target=".details__modal"><img src="../static/assets/img/images/9-1.jpg"
+                                                        alt=""></a>
+                                            </div>
+                                            <!--TB__body end-->
+                                        </div>
+                                        <!-- touchpoint__box -->
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-5">
+                                        </div>
+                                        <div class="col-sm-12 col-md-7">
+                                            <div class="dataTables_paginate paging_simple_numbers"
+                                                id="data_table_paginate">
+                                                <ul class="pagination justify-content-end">
+                                                    <li class="paginate_button page-item previous disabled"><a
+                                                            href="javascript:;" class="page-link">Previous</a>
+                                                    </li>
+                                                    <li class="paginate_button page-item active"><a href="javascript:;"
+                                                            class="page-link">1</a></li>
+                                                    <li class="paginate_button page-item next disabled"><a
+                                                            class="page-link">Next</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="tab-pane" id="tab-p-i_4" role="tabpanel">
+                                    <div class="card card-shadow mb-4">
+                                        <!-- <div class="card-header border-0">
+                                            <div class="custom-title-wrap bar-primary">
+                                                <div class="custom-title">Datatable</div>
+                                            </div>
+                                        </div> -->
+                                        <div class="card-body- pt-3 pb-4">
+                                            <div class="table-responsive">
+                                                <table id="data_table" class="table table-bordered table-striped"
+                                                    cellspacing="0">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Company</th>
+                                                            <th>Customer Segment</th>
+                                                            <th>Date</th>
+                                                            <th>Time</th>
+                                                            <th>Subject</th>
+                                                            <th>Product Category</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <th>Position</th>
+                                                            <th>Office</th>
+                                                            <th>Age</th>
+                                                            <th>Start date</th>
+                                                            <th>Salary</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Tiger Nixon</td>
+                                                            <td>System Architect</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>61</td>
+                                                            <td>2011/04/25</td>
+                                                            <td>$320,800</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Garrett Winters</td>
+                                                            <td>Accountant</td>
+                                                            <td>Tokyo</td>
+                                                            <td>63</td>
+                                                            <td>2011/07/25</td>
+                                                            <td>$170,750</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Ashton Cox</td>
+                                                            <td>Junior Technical Author</td>
+                                                            <td>San Francisco</td>
+                                                            <td>66</td>
+                                                            <td>2009/01/12</td>
+                                                            <td>$86,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cedric Kelly</td>
+                                                            <td>Senior Javascript Developer</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>22</td>
+                                                            <td>2012/03/29</td>
+                                                            <td>$433,060</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Airi Satou</td>
+                                                            <td>Accountant</td>
+                                                            <td>Tokyo</td>
+                                                            <td>33</td>
+                                                            <td>2008/11/28</td>
+                                                            <td>$162,700</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Brielle Williamson</td>
+                                                            <td>Integration Specialist</td>
+                                                            <td>New York</td>
+                                                            <td>61</td>
+                                                            <td>2012/12/02</td>
+                                                            <td>$372,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Herrod Chandler</td>
+                                                            <td>Sales Assistant</td>
+                                                            <td>San Francisco</td>
+                                                            <td>59</td>
+                                                            <td>2012/08/06</td>
+                                                            <td>$137,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Rhona Davidson</td>
+                                                            <td>Integration Specialist</td>
+                                                            <td>Tokyo</td>
+                                                            <td>55</td>
+                                                            <td>2010/10/14</td>
+                                                            <td>$327,900</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Colleen Hurst</td>
+                                                            <td>Javascript Developer</td>
+                                                            <td>San Francisco</td>
+                                                            <td>39</td>
+                                                            <td>2009/09/15</td>
+                                                            <td>$205,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sonya Frost</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>23</td>
+                                                            <td>2008/12/13</td>
+                                                            <td>$103,600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jena Gaines</td>
+                                                            <td>Office Manager</td>
+                                                            <td>London</td>
+                                                            <td>30</td>
+                                                            <td>2008/12/19</td>
+                                                            <td>$90,560</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Quinn Flynn</td>
+                                                            <td>Support Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>22</td>
+                                                            <td>2013/03/03</td>
+                                                            <td>$342,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Charde Marshall</td>
+                                                            <td>Regional Director</td>
+                                                            <td>San Francisco</td>
+                                                            <td>36</td>
+                                                            <td>2008/10/16</td>
+                                                            <td>$470,600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Haley Kennedy</td>
+                                                            <td>Senior Marketing Designer</td>
+                                                            <td>London</td>
+                                                            <td>43</td>
+                                                            <td>2012/12/18</td>
+                                                            <td>$313,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Tatyana Fitzpatrick</td>
+                                                            <td>Regional Director</td>
+                                                            <td>London</td>
+                                                            <td>19</td>
+                                                            <td>2010/03/17</td>
+                                                            <td>$385,750</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Michael Silva</td>
+                                                            <td>Marketing Designer</td>
+                                                            <td>London</td>
+                                                            <td>66</td>
+                                                            <td>2012/11/27</td>
+                                                            <td>$198,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Paul Byrd</td>
+                                                            <td>Chief Financial Officer (CFO)</td>
+                                                            <td>New York</td>
+                                                            <td>64</td>
+                                                            <td>2010/06/09</td>
+                                                            <td>$725,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gloria Little</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>New York</td>
+                                                            <td>59</td>
+                                                            <td>2009/04/10</td>
+                                                            <td>$237,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bradley Greer</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td>41</td>
+                                                            <td>2012/10/13</td>
+                                                            <td>$132,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Dai Rios</td>
+                                                            <td>Personnel Lead</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>35</td>
+                                                            <td>2012/09/26</td>
+                                                            <td>$217,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jenette Caldwell</td>
+                                                            <td>Development Lead</td>
+                                                            <td>New York</td>
+                                                            <td>30</td>
+                                                            <td>2011/09/03</td>
+                                                            <td>$345,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Yuri Berry</td>
+                                                            <td>Chief Marketing Officer (CMO)</td>
+                                                            <td>New York</td>
+                                                            <td>40</td>
+                                                            <td>2009/06/25</td>
+                                                            <td>$675,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Caesar Vance</td>
+                                                            <td>Pre-Sales Support</td>
+                                                            <td>New York</td>
+                                                            <td>21</td>
+                                                            <td>2011/12/12</td>
+                                                            <td>$106,450</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Doris Wilder</td>
+                                                            <td>Sales Assistant</td>
+                                                            <td>Sidney</td>
+                                                            <td>23</td>
+                                                            <td>2010/09/20</td>
+                                                            <td>$85,600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Angelica Ramos</td>
+                                                            <td>Chief Executive Officer (CEO)</td>
+                                                            <td>London</td>
+                                                            <td>47</td>
+                                                            <td>2009/10/09</td>
+                                                            <td>$1,200,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gavin Joyce</td>
+                                                            <td>Developer</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>42</td>
+                                                            <td>2010/12/22</td>
+                                                            <td>$92,575</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jennifer Chang</td>
+                                                            <td>Regional Director</td>
+                                                            <td>Singapore</td>
+                                                            <td>28</td>
+                                                            <td>2010/11/14</td>
+                                                            <td>$357,650</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Brenden Wagner</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>San Francisco</td>
+                                                            <td>28</td>
+                                                            <td>2011/06/07</td>
+                                                            <td>$206,850</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Fiona Green</td>
+                                                            <td>Chief Operating Officer (COO)</td>
+                                                            <td>San Francisco</td>
+                                                            <td>48</td>
+                                                            <td>2010/03/11</td>
+                                                            <td>$850,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Shou Itou</td>
+                                                            <td>Regional Marketing</td>
+                                                            <td>Tokyo</td>
+                                                            <td>20</td>
+                                                            <td>2011/08/14</td>
+                                                            <td>$163,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Michelle House</td>
+                                                            <td>Integration Specialist</td>
+                                                            <td>Sidney</td>
+                                                            <td>37</td>
+                                                            <td>2011/06/02</td>
+                                                            <td>$95,400</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Suki Burks</td>
+                                                            <td>Developer</td>
+                                                            <td>London</td>
+                                                            <td>53</td>
+                                                            <td>2009/10/22</td>
+                                                            <td>$114,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Prescott Bartlett</td>
+                                                            <td>Technical Author</td>
+                                                            <td>London</td>
+                                                            <td>27</td>
+                                                            <td>2011/05/07</td>
+                                                            <td>$145,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gavin Cortez</td>
+                                                            <td>Team Leader</td>
+                                                            <td>San Francisco</td>
+                                                            <td>22</td>
+                                                            <td>2008/10/26</td>
+                                                            <td>$235,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Martena Mccray</td>
+                                                            <td>Post-Sales support</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>46</td>
+                                                            <td>2011/03/09</td>
+                                                            <td>$324,050</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Unity Butler</td>
+                                                            <td>Marketing Designer</td>
+                                                            <td>San Francisco</td>
+                                                            <td>47</td>
+                                                            <td>2009/12/09</td>
+                                                            <td>$85,675</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Howard Hatfield</td>
+                                                            <td>Office Manager</td>
+                                                            <td>San Francisco</td>
+                                                            <td>51</td>
+                                                            <td>2008/12/16</td>
+                                                            <td>$164,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Hope Fuentes</td>
+                                                            <td>Secretary</td>
+                                                            <td>San Francisco</td>
+                                                            <td>41</td>
+                                                            <td>2010/02/12</td>
+                                                            <td>$109,850</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Vivian Harrell</td>
+                                                            <td>Financial Controller</td>
+                                                            <td>San Francisco</td>
+                                                            <td>62</td>
+                                                            <td>2009/02/14</td>
+                                                            <td>$452,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Timothy Mooney</td>
+                                                            <td>Office Manager</td>
+                                                            <td>London</td>
+                                                            <td>37</td>
+                                                            <td>2008/12/11</td>
+                                                            <td>$136,200</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jackson Bradshaw</td>
+                                                            <td>Director</td>
+                                                            <td>New York</td>
+                                                            <td>65</td>
+                                                            <td>2008/09/26</td>
+                                                            <td>$645,750</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Olivia Liang</td>
+                                                            <td>Support Engineer</td>
+                                                            <td>Singapore</td>
+                                                            <td>64</td>
+                                                            <td>2011/02/03</td>
+                                                            <td>$234,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Bruno Nash</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>London</td>
+                                                            <td>38</td>
+                                                            <td>2011/05/03</td>
+                                                            <td>$163,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sakura Yamamoto</td>
+                                                            <td>Support Engineer</td>
+                                                            <td>Tokyo</td>
+                                                            <td>37</td>
+                                                            <td>2009/08/19</td>
+                                                            <td>$139,575</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Thor Walton</td>
+                                                            <td>Developer</td>
+                                                            <td>New York</td>
+                                                            <td>61</td>
+                                                            <td>2013/08/11</td>
+                                                            <td>$98,540</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Finn Camacho</td>
+                                                            <td>Support Engineer</td>
+                                                            <td>San Francisco</td>
+                                                            <td>47</td>
+                                                            <td>2009/07/07</td>
+                                                            <td>$87,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Serge Baldwin</td>
+                                                            <td>Data Coordinator</td>
+                                                            <td>Singapore</td>
+                                                            <td>64</td>
+                                                            <td>2012/04/09</td>
+                                                            <td>$138,575</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Zenaida Frank</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>New York</td>
+                                                            <td>63</td>
+                                                            <td>2010/01/04</td>
+                                                            <td>$125,250</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Zorita Serrano</td>
+                                                            <td>Software Engineer</td>
+                                                            <td>San Francisco</td>
+                                                            <td>56</td>
+                                                            <td>2012/06/01</td>
+                                                            <td>$115,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jennifer Acosta</td>
+                                                            <td>Junior Javascript Developer</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>43</td>
+                                                            <td>2013/02/01</td>
+                                                            <td>$75,650</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cara Stevens</td>
+                                                            <td>Sales Assistant</td>
+                                                            <td>New York</td>
+                                                            <td>46</td>
+                                                            <td>2011/12/06</td>
+                                                            <td>$145,600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Hermione Butler</td>
+                                                            <td>Regional Director</td>
+                                                            <td>London</td>
+                                                            <td>47</td>
+                                                            <td>2011/03/21</td>
+                                                            <td>$356,250</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Lael Greer</td>
+                                                            <td>Systems Administrator</td>
+                                                            <td>London</td>
+                                                            <td>21</td>
+                                                            <td>2009/02/27</td>
+                                                            <td>$103,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Jonas Alexander</td>
+                                                            <td>Developer</td>
+                                                            <td>San Francisco</td>
+                                                            <td>30</td>
+                                                            <td>2010/07/14</td>
+                                                            <td>$86,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Shad Decker</td>
+                                                            <td>Regional Director</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>51</td>
+                                                            <td>2008/11/13</td>
+                                                            <td>$183,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Michael Bruce</td>
+                                                            <td>Javascript Developer</td>
+                                                            <td>Singapore</td>
+                                                            <td>29</td>
+                                                            <td>2011/06/27</td>
+                                                            <td>$183,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Donna Snider</td>
+                                                            <td>Customer Support</td>
+                                                            <td>New York</td>
+                                                            <td>27</td>
+                                                            <td>2011/01/25</td>
+                                                            <td>$112,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab-p-i_3" role="tabpanel">
+                                    <div class="calendar__wrapper">
+                                        <div class="card card-shadow mb-4">
+                                            <!-- <div class="card-header border-0">
+                                                <div class="custom-title-wrap bar-warning">
+                                                    <div class="custom-title">Full Calendar</div>
+                                                </div>
+                                            </div> -->
+                                            <div class="card-body">
+                                                <div id='calendar-external-events'></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Third row of this page, contain Accordion with pill tabs. End here-->
+
+
+        </div>
+
+        <!--footer-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright &copy; CRM Spy 2019</small>
+                </div>
+            </div>
+        </footer>
+        <!--/footer-->
+    </div>
+    <!--/main content wrapper-->
+
+
+    <!-- Modal -->
+    <div class="modal fade details__modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0 pl-0 pb-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="details__modal__content">
+                        <div class="DM__left">
+                            <div class="DML_header">
+                                <figure><img src="../static/assets/img/brands/1.jpg" alt=""></figure>
+                                <div>
+                                    <h6>From <a href="#">Gousto(UK)</a> to <a href="#">subscription abandoner</a></h6>
+                                    <p>Tuesday, April 02, 2019 at 6:39 pm</p>
+                                </div>
+                            </div>
+                            <div class="DML_body">
+                                <h6>New menu out now!</h6>
+                                <p>can't see this email? <a href="">click here.</a> Gousto Corin, this weeek's menu if
+                                    here!
+                                </p>
+
+                                <div class="d-flex viewing__options">
+                                    <div><strong>VIEWING</strong>
+                                        <select>
+                                            <option>Desktop</option>
+                                        </select></div>
+                                    <button class="btn btn-sm btn-primary">Export Image</button>
+                                </div>
+
+                                <div class="image__preview">
+                                    <img src="../static/assets/img/images/4.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="DM__right">
+                            <ul class="nav" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#details__tab" role="tab"
+                                        aria-selected="true">Details</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#addtolist__tab" role="tab"
+                                        aria-selected="false">Add to List</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="details__tab" role="tabpanel">
+                                    <div class="tab__box">
+                                        <h6 class="text-muted">EMAIL SCORE <span data-toggle="tooltip"
+                                                data-placement="top" title="Some information"><i
+                                                    class="icon-question text-primary"></i></span></h6>
+                                        <div class="email__score">
+                                            <h2 class="text-success">87%</h2>
+                                            <ul class="list-unstyled">
+                                                <li class="text-success"><i class="ti-check"></i> Mobile Optimized</li>
+                                                <li class="text-success"><i class="ti-check"></i> Spam Filter Compliant
+                                                </li>
+                                                <li class="text-success"><i class="ti-check"></i> Replayable email
+                                                    adddess
+                                                </li>
+                                                <li class="text-danger"><i class="ti-close"></i> Optimized Preview text
+                                                </li>
+                                                <li class="text-success"><i class="ti-check"></i> Gmail Friendly HTML
+                                                    Weight
+                                                </li>
+                                                <li class="text-success"><i class="ti-check"></i> Inbox-Friendly Subject
+                                                    line Length</li>
+                                                <li class="text-success"><i class="ti-check"></i> Pasing DKIM & SPF
+                                                    Checks
+                                                </li>
+                                                <li class="text-success"><i class="ti-check"></i> Sensible Image Weight
+                                                </li>
+                                            </ul>
+                                            <p><a href="#">View Email Score Trends</a></p>
+                                        </div>
+
+                                        <div class="border-top border-bottom info__box">
+                                            <h5>What Powers Gousto (UK) Emails?</h5>
+                                            <p>Every email we recieve is passed to determine the sending ESP and any
+                                                additional
+                                                email technologies used. </p>
+                                            <button class="upgrade__btn">Upgrade Now</button>
+                                        </div>
+                                        <p class="text-muted mt-2"><small>Every email we recieve is passed.</small></p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="addtolist__tab" role="tabpanel">
+                                    Add to List</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal End -->
+
+
+    <!--basic scripts-->
+    <script src="../static/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../static/assets/vendor/popper.min.js"></script>
+    <script src="../static/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../static/assets/vendor/jquery-dropdown-master/jquery.dropdown.js"></script>
+
+    <script src="../static/assets/vendor/m-custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!--sparkline-->
+    <script src="../static/assets/vendor/sparkline/jquery.sparkline.js"></script>
+    <!--sparkline initialization-->
+    <script src="../static/assets/vendor/js-init/sparkline/init-sparkline.js"></script>
+
+
+    <!-- Miltuple line chart js code from Highchart.js -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <!--chartjs-->
+    <script src="../static/assets/vendor/chartjs/Chart.bundle.min.js"></script>
+    <!--chartjs initialization-->
+    <script src="../static/assets/vendor/js-init/chartjs/init-bubble-chart.js"></script>
+
+
+    <script src="../static/assets/vendor/js-init/chartjs/init-doughnut-chart.js"></script>
+    <script src="../static/assets/vendor/js-init/chartjs/init-doughnut-chart1.js"></script>
+    <script src="../static/assets/vendor/js-init/chartjs/init-doughnut-chart2.js"></script>
+    <script src="../static/assets/vendor/js-init/chartjs/init-dash3-sales.js"></script>
+
+
+    <!--echarts-->
+    <script type="text/javascript" src="../static/assets/vendor/echarts/echarts-all-3.js"></script>
+
+    <!--init echarts-->
+    <script type="text/javascript" src="../static/assets/vendor/js-init/echart/init-doughnut-chart.js"></script>
+
+    <!--vectormap-->
+    <script src="../static/assets/vendor/vector-map/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="../static/assets/vendor/vector-map/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../static/assets/vendor/vector-map/jquery-jvectormap-us-aea.js"></script>
+    <!--vectormap initialization-->
+    <script src="../static/assets/vendor/js-init/vmap/init-vmap-world.js"></script>
+    <script src="../static/assets/vendor/js-init/vmap/init-vmap-usa.js"></script>
+
+
+    <!--date picker-->
+    <script src="../static/assets/vendor/date-picker/js/bootstrap-datepicker.min.js"></script>
+    <!--init date picker-->
+    <script src="../static/assets/vendor/js-init/pickers/init-date-picker.js"></script>
+
+    <!--datetime picker-->
+    <script src="../static/assets/vendor/datetime-picker/js/bootstrap-datetimepicker.js"></script>
+    <script src="../static/assets/vendor/timepicker/js/bootstrap-timepicker.js"></script>
+
+    <!--to do list-->
+    <script src="../static/assets/vendor/icheck/skins/icheck.min.js"></script>
+    <!--to do list initialization-->
+    <script src="../static/assets/vendor/js-init/init-todo-list.js"></script>
+
+    <!-- owl carousel -->
+    <script src="../static/assets/js/owl.carousel.min.js"></script>
+
+    <!--datatables-->
+    <script src="../static/assets/vendor/data-tables/jquery.dataTables.min.js"></script>
+    <script src="../static/assets/vendor/data-tables/dataTables.bootstrap4.min.js"></script>
+    <!--init datatable-->
+    <script src="../static/assets/vendor/js-init/init-datatable.js"></script>
+
+
+    <!--calender-->
+    <script src='../static/assets/vendor/fullcalendar-3.7.0/lib/moment.min.js'></script>
+    <script src='../static/assets/vendor/fullcalendar-3.7.0/fullcalendar.js'></script>
+    <!--init calendar-->
+    <script src='../static/assets/vendor/js-init/init-calendar-external-events.js'></script>
+
+
+    <!--[if lt IE 9]>
+    <script src="assets/vendor/modernizr.js"></script>
+    <![endif]-->
+
+    <!--basic scripts initialization-->
+    <script src="../static/assets/js/scripts.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+        $(document).ready(() => {
+            $(".owl-carousel").owlCarousel({
+                items: 4,
+                margin: 20,
+                nav: true,
+                dots: false,
+                responsive: {
+                    320: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2,
+                    },
+                    1200: {
+                        items: 4,
+                    }
+                }
+            });
+            $('.border-style-wrapper .dropdown-item.d-flex').click(function () {
+                $(this).parents('.border-style-wrapper').find('.dropdown-item.d-flex').removeClass(
+                    'selected');
+                $(this).addClass('selected')
+                var text = $(this).find('.itemText').text();
+                $(this).parents('.border-style-wrapper').find('.displayText').text(text);
+
+                //$(this).parents('.border-style-wrapper').find('.dropdown-item.msg-unread').text(text);
+            })
+
+
+            $(document).on('click', '.eventModal', function () {
+                $('.details__modal').modal('show');
+            })
+
+            $(document).on('click', '#data_table tbody tr', function () {
+                $('.details__modal').modal('show');
+            })
+        })
+
+
+
+
+
+
+        // Multiple line chart form highcharts initialization
+        Highcharts.chart('multi-line-chart-container-product-category', {
+
+            title: {
+            text: ''
+          },
+
+          subtitle: {
+            text: ''
+          },
+
+          yAxis: {
+            title: {
+              text: ''
+            }
+          },
+          legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle'
+          },
+
+          plotOptions: {
+            series: {
+              label: {
+                connectorAllowed: false
+              },
+              pointStart: 1
+            }
+          },
+
+          series: [{
+            name: 'Vacation',
+            data: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
+          }, {
+            name: 'Insurance',
+            data: [3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
+          }, {
+            name: 'Profits',
+            data: [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]
+          }, {
+            name: 'Gas',
+            data: [7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+          }, {
+            name: 'Mobile',
+            data: [9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32]
+          }, {
+            name: 'DSL',
+            data: [11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34]
+          }, {
+            name: 'Electricity',
+            data: [13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36]
+          }],
+
+          responsive: {
+            rules: [{
+              condition: {
+                maxWidth: 800
+              },
+              chartOptions: {
+                legend: {
+                  layout: 'horizontal',
+                  align: 'center',
+                  verticalAlign: 'bottom'
+                }
+              }
+            }]
+          }
+
+        });
+
+
+
+
+
+
+
+
+        //Doughnut echarts init
+
+        var dom = document.getElementById("doughnut_chart_product_category");
+        var dnutChart = echarts.init(dom);
+
+        var app = {};
+        option = null;
+        option = {
+
+                color: ['#606d6e','#81d6e9', '#ff936f','#00baaa', '#3a494c', '#ff5e64', '#f6c644'],
+                tooltip : {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b} : {c} ({d}%)'
+                },
+                legend: {
+                    orient : 'vertical',
+                    x : 'left',
+                },
+                series : [
+                    {
+                        name:'Source',
+                        type:'pie',
+                        data:[
+                            {value:335, name:'Vacation'},
+                            {value:310, name:'Insurance'},
+                            {value:234, name:'Profits'},
+                            {value:135, name:'DSL'},
+                            {value:1548, name:'Mobile'},
+                            {value:508, name:'Gas'},
+                            {value:108, name:'Electricity'},
+
+                        ]
+                    }
+                ]
+            };
+
+            if (option && typeof option === "object") {
+                dnutChart.setOption(option, false);
+            }
+
+            /**
+             * Resize chart on window resize
+             * @return {void}
+             */
+            window.onresize = function() {
+                dnutChart.resize();
+            };
+
+
+
+
+
+        // "Product Categories per Day" JS code start here
+        var ctx = document.getElementById('product-categories-per-day-bar-chart-js').getContext('2d');
+
+        var myBarChart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'bar',
+
+            // The data for our dataset
+            data: {
+                labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                datasets: [{
+                    label: "Profits",
+                    data: [40, 90, 210, 160, 230, 50, 120],
+                    backgroundColor: '#FFC000',
+                    borderColor: '#FFC000',
+                    pointBorderColor: '#ffffff',
+                    pointBackgroundColor: '#FFC000',
+                    pointBorderWidth: 2,
+                    pointRadius: 4
+
+                }, {
+                    label: "Mobile",
+                    data: [160, 140, 20, 270, 110, 80, 200],
+                    backgroundColor: '#3dba6f',
+                    borderColor: '#3dba6f',
+                    pointBorderColor: '#ffffff',
+                    pointBackgroundColor: '#3dba6f',
+                    pointBorderWidth: 2,
+                    pointRadius: 4
+                }, {
+                    label: "DSL",
+                    data: [120, 100, 40, 170, 10, 30, 100],
+                    backgroundColor: '#57b9d8',
+                    borderColor: '#57b9d8',
+                    pointBorderColor: '#ffffff',
+                    pointBackgroundColor: '#57b9d8',
+                    pointBorderWidth: 2,
+                    pointRadius: 4
+                }, {
+                    label: "Vacation",
+                    data: [60, 40, 120, 70, 10, 180, 100],
+                    backgroundColor: '#7A7FE8',
+                    borderColor: '#7A7FE8',
+                    pointBorderColor: '#ffffff',
+                    pointBackgroundColor: '#7A7FE8',
+                    pointBorderWidth: 2,
+                    pointRadius: 4
+                }]
+            },
+
+            // Configuration options go here
+            options: {
+                maintainAspectRatio: false,
+                legend: {
+                    display: true
+                },
+
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        gridLines: {
+                            zeroLineColor: '#e7ecf0',
+                            color: '#e7ecf0',
+                            borderDash: [5,5,5],
+                            zeroLineBorderDash: [5,5,5],
+                            drawBorder: false
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        gridLines: {
+                            zeroLineColor: '#e7ecf0',
+                            color: '#e7ecf0',
+                            borderDash: [5,5,5],
+                            zeroLineBorderDash: [5,5,5],
+                            drawBorder: false
+                        }
+                    }]
+
+                },
+                elements: {
+                    line: {
+                        tension: 0.00001,
+    //              tension: 0.4,
+                        borderWidth: 1
+                    },
+                    point: {
+                        radius: 2,
+                        hitRadius: 10,
+                        hoverRadius: 6,
+                        borderWidth: 4
+                    }
+                }
+            }
+        });
+        // "Product Categories per Day" JS code end here
+
+
+
+
+
+
+
+        // Calendar initialization js code
+        /* initialize the external events
+           -----------------------------------------------------------------*/
+
+        $("#external-events .fc-event").each(function() {
+          // store data so the calendar knows to render an event upon drop
+          $(this).data("event", {
+            title: $.trim($(this).text()), // use the element's text as the event title
+            stick: true, // maintain when user navigates (see docs on the renderEvent method)
+            className: $(this).data("color"),
+            description: "make the event draggable using jQuery UI"
+          });
+
+          // make the event draggable using jQuery UI
+          $(this).draggable({
+            zIndex: 999,
+            revert: true, // will cause the event to go back to its
+            revertDuration: 0 //  original position after the drag
+          });
+        });
+
+        /* initialize the calendar
+           -----------------------------------------------------------------*/
+        function initFullScreenCalendar() {
+          $("#calendar-external-events").fullCalendar({
+            header: {
+              left: "prev",
+              center: "title",
+              right: "next"
+            },
+            defaultDate: "2018-03-12",
+            navLinks: true, // can click day/week names to navigate views
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+              {
+                title: "Day Long Event",
+                start: "2018-03-01",
+                className:"eventModal"
+              },
+              {
+                title: "Tech Event",
+                start: "2018-03-07",
+                end: "2018-03-10",
+                className: "d-fc-event-primary eventModal",
+              },
+              {
+                title: "Conference",
+                start: "2018-03-17",
+                end: "2018-03-13",
+                className: "d-fc-event-warning eventModal"
+              },
+              {
+                title: "Meeting",
+                start: "2018-03-12T10:30:00",
+                end: "2018-03-12T12:30:00",
+                className:"eventModal"
+              },
+              {
+                title: "Lunch",
+                start: "2018-03-12T12:00:00",
+                className: "eventModal"
+              },
+              {
+                title: "Meeting",
+                start: "2018-03-12T14:30:00",
+                className: "eventModal"
+              },
+              {
+                title: "Happy Hour",
+                start: "2018-03-12T17:30:00",
+                className: "eventModal"
+              },
+              {
+                title: "Dinner",
+                start: "2018-03-12T20:00:00",
+                className: "eventModal"
+              },
+              {
+                title: "Birthday Party",
+                start: "2018-03-13T07:00:00",
+                className: "d-fc-event-info eventModal"
+              },
+              {
+                title: "Google Event",
+                start: "2018-03-28",
+                className: "d-fc-event-success eventModal"
+              }
+            ],
+            editable: true,
+            droppable: true, // this allows things to be dropped onto the calendar
+            drop: function() {
+              // is the "remove after drop" checkbox checked?
+              if ($("#drop-remove").is(":checked")) {
+                // if so, remove the element from the "Draggable Events" list
+                $(this).remove();
+              }
+            }
+          });
+        }
+
+        //initFullScreenCalendar();
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+          var activatedTab = e.target.hash;
+
+          if(activatedTab == '#tab-p-i_3') {
+            setTimeout(() => {
+              initFullScreenCalendar();
+            }, 50);
+          }
+          if(activatedTab == '#tab-p-i_4') {
+              $('.inbox__filters').addClass('active')
+          }
+          else {
+              $('.inbox__filters').removeClass('active')
+          }
+
+        })
+
+
+
+
+    </script>
+
+    <style>
+        .selected {
+            background: #f4f6f9;
+        }
+    </style>
+</body>
+
+</html>
